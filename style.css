@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Steelfish";
+  src: url('fonts/steelfish\ rg.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: "Steelfish", sans-serif;
+    font-weight: 100;
+    font-size: 77px;
+    background-color: #455250;
+}
+
+.container {
+    display: grid;
+    justify-items: center;
+}
+
+.title {
+    margin: 0;
+    color: #343D3D;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.time-row {
+    display: flex;
+    gap: 60px;
+}
+
+.time-box {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    width: 323px;
+    display: grid;
+    place-items: center;
+    font-size: 168px;
+    color: #C92555;
+    background: radial-gradient(circle at 120% 160%, #333738 70%, #373C3F 70%);
+}
+
+.time-box::after {
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    text-transform: uppercase;
+    transform-origin: bottom left;
+    font-size: 70px;
+    line-height: 1;
+    transform: rotateZ(-90deg) translateY(100%);
+    color: #667673
+}
+
+.days::after { content: 'days'; }
+.hours::after { content: 'hours'; }
+.minutes::after { content: 'minutes'; }
